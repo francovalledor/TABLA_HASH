@@ -395,8 +395,14 @@ class Lista:
         """
         anterior = self.frente
         actual = anterior.siguiente
+
+        if len(self) == 0:
+            raise self.ELEMENTO_NO_ENCONTRADO
+        
         while True:
             if actual.data == valor:
+                if actual == self.__ultimo__:
+                    self.__ultimo__ = anterior
                 anterior.siguiente = anterior.siguiente.siguiente
                 self.tamanio -= 1
                 break
