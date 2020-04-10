@@ -177,8 +177,6 @@ class TablaHash:
         """
         Crea una tabla nueva del doble de tamaño
         """
-        print("rehashing:")
-        print(f"tamaño {self.__tamanio_tabla*2}")
         tabla_aux = TablaHash(self.__tamanio_tabla*2)
         for clave, valor in self.items():
             tabla_aux.insertar(clave, valor)

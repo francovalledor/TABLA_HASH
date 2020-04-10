@@ -183,6 +183,95 @@ from lista import Lista
 # print(tabla['Juan Francisco Camino Mir'.upper()])
 
 
+# # EJ 6
+# from random import choice
+# troopers = set()  # Para evitar repeticiones de trooper
+
+
+# def nuevo_trooper():
+#     legiones = ('FL', 'TF', 'TK', 'CT', 'FN', 'FO')
+#     numeros_str = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
+#     trooper = choice(legiones)
+#     for i in range(0, 4):
+#         trooper += choice(numeros_str)
+#     return trooper
+
+
+# while len(troopers) < 2000:
+#     troopers.add(nuevo_trooper())
+
+# # for trooper in troopers:
+# #     print(trooper[-3:])
+
+# tabla_legion = TablaHash()
+# tabla_numeros = TablaHash()
+
+# # Para agregar los troopers a la tabla de dispersión y poder guardar troopers
+# # con la misma clave voy a crear una tabla hash y dentro, por cada clave, voy
+# # a agregar una lista. Dentro de la lista agregaré los troopers
+
+# #Agregando los troopers a la tabla legiones
+# for trooper in troopers:
+#     lista = tabla_legion.obtener(trooper[0:2])
+    
+#     if not lista:
+#         lista = []
+#         tabla_legion.insertar(trooper[0:2], lista)
+    
+#     lista.append(trooper)
+
+# #Agregando los troopers a la tabla numeros
+# for trooper in troopers:
+#     lista = tabla_numeros.obtener(trooper[-3:])
+    
+#     if not lista:
+#         lista = []
+#         tabla_numeros.insertar(trooper[-3:], lista)
+    
+#     lista.append(trooper)
+
+
+# def print_titulo(texto):
+#     print('\n')
+#     print('-'*75)
+#     print(f"MISIÓN: {texto.upper()}")
+#     print('-'*75)
+    
+
+# def reclutar_troopers(tabla, mision, cadena_de_busqueda):
+#     print_titulo(mision)
+#     reclutados = tabla.obtener(cadena_de_busqueda)
+#     if reclutados:
+#         print('Los troopers que irán a la misión son:')
+#         for trooper in reclutados:
+#             print(f"- {trooper}")
+#     else:
+#         print('No tenemos troopers para esta misión')
+
+# ###Misión de asalto: 781
+# reclutar_troopers(tabla_numeros, 'misión de asalto', '781')
+
+
+# #Misión de exploración: 537
+# reclutar_troopers(tabla_numeros, 'mision de exploración', '537')
+
+# #Custodiar a Darth Vader
+# reclutar_troopers(tabla_legion, 'custodiar a darth vader en planeta hoth', 'CT')
+
+# #Exterminar a Endor
+# reclutar_troopers(tabla_legion, 'exterminar a Endor', 'TF')
+
+
+
+
+
+# EJ 7
+
+
+
+
+
+
 
 # # EJ8
 # from crypt import Crypt
@@ -222,3 +311,18 @@ from lista import Lista
 # except ValueError:
 #     print('No fue posible desencriptar el mensaje')
 
+
+# # EJ9
+# from ej9 import Cifrar
+# mensaje = "Esto es un mensaje"
+# mensaje_cifrado = Cifrar.cifrar(mensaje)
+
+# print("\n\nMENSAJE:")
+# print(mensaje)
+# print("\n\nMENSAJE CIFRADO:")
+# print(mensaje_cifrado)
+# print("\n\nMENSAJE DESCIFRADO:")
+# print(Cifrar.descifrar(mensaje_cifrado))
+
+
+#EJ10
