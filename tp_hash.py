@@ -265,12 +265,40 @@ from lista import Lista
 
 
 
-# EJ 7
-from pokemondata import pokemones
+# # EJ 7
+# from pokemondata import pokemones
+
+# # almacenar todos los tipos en un conjunto
+# conjunto_tipos = set()
+
+# for pokemon in pokemones:
+#     conjunto_tipos.add(pokemon.tipo)
+#     if pokemon.subtipo:
+#         conjunto_tipos.add(pokemon.subtipo)
+
+# # crear la tabla de tipos y en el interior, por cada tipo,
+# # crear una tabla abierta
+# cantidad_tipos = len(conjunto_tipos)
+# tabla_tipos = TablaHashCerrada(cantidad_tipos * 2)
+
+# for tipo in conjunto_tipos:
+#     tabla_tipos.insertar(tipo, TablaHash(15))
+
+# # almacenar cada pokemon en su lugar
+# for pokemon in pokemones:
+#     tabla_tipos[pokemon.tipo][pokemon.numero] = pokemon
+#     if pokemon.subtipo:
+#         tabla_tipos[pokemon.subtipo][pokemon.numero] = pokemon
 
 
+# def mostrar_tablas(tipo):
+#     print(f'\n\nPokemones tipo {tipo.upper()}:')
+#     for numero, pokemon in tabla_tipos[tipo].items():
+#         print(numero, pokemon)
 
-
+# # mostrar las tablas
+# for tipo in conjunto_tipos:
+#     mostrar_tablas(tipo)
 
 
 

@@ -1,29 +1,22 @@
 from lista import Lista
-from nombresdata import nombres
 import random
-class Entrenador:
-    def __init__(self, nombre, torneos_ganados, perdidas, ganadas, pokemones):
-        self.nombre = nombre
-        self.torneos_ganados = torneos_ganados
-        self.perdidas = perdidas
-        self.ganadas = ganadas
-        self.pokemones = pokemones
 
-    def __repr__(self):
-        return '{:15} \tperdidas: {}  \tganadas: {} \tTorneos ganados: {}'.format(self.nombre, self.perdidas, self.ganadas, self.torneos_ganados)
 
-class Pokemon:
+class Pokemon: 
+    i = 1
+
     def __init__(self, nombre, nivel, tipo, subtipo):
         self.nombre = nombre
         self.nivel = nivel
         self.tipo = tipo
         self.subtipo = subtipo
+        self.numero = Pokemon.i
+        Pokemon.i += 1
 
     def __repr__(self):
         return str('{}({}): {}/{}'.format(self.nombre, self.nivel, self.tipo, self.subtipo ))
 
 pokemones = Lista()
-entrenadores = Lista()
 
 pokemones.append(Pokemon('bulbasaur', 64, 'poison', 'grass'))
 pokemones.append(Pokemon('ivysaur', 142, 'poison', 'grass'))
@@ -828,13 +821,3 @@ pokemones.append(Pokemon('naganadel', 243, 'dragon', 'poison'))
 pokemones.append(Pokemon('stakataka', 257, 'steel', 'rock'))
 pokemones.append(Pokemon('blacephalon', 257, 'ghost', 'fire'))
 pokemones.append(Pokemon('zeraora', 270, 'electric', None))
-
-for i in range(0,20):
-    nombre = random.choice(nombres)
-    torneos_ganados = random.randint(0,100)
-    perdidas = random.randint(0,300)
-    ganadas = torneos_ganados + random.randint(0,100)
-    pokemones_propios = Lista()
-    for i in range(0, random.randint(0,20)):
-        pokemones_propios.append(random.choice(pokemones))
-    entrenadores.append(Entrenador(nombre, torneos_ganados, perdidas, ganadas, pokemones_propios))
