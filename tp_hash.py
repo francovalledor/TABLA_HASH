@@ -266,6 +266,7 @@ from lista import Lista
 
 
 # EJ 7
+from pokemondata import pokemones
 
 
 
