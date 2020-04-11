@@ -31,7 +31,7 @@ def descifrar_caracter(caracter_cifrado: str):
     descifrado = diccionario.obtener(caracter_cifrado)
 
     if not descifrado:
-        for i in range(32, 126):
+        for i in range(32, 255):
             c = chr(i)
             if cifrar_caracter(c) == caracter_cifrado:
                 diccionario.insertar(caracter_cifrado, c)
