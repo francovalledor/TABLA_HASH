@@ -354,4 +354,21 @@ from lista import Lista
 # print(Cifrar.descifrar(mensaje_cifrado))
 
 
-#EJ10
+# #EJ10
+
+# NOTA: no puede encontrar una codificación que funcione al 100%. La que mejor se adaptó fue utf-8
+#  
+import hydra
+archivos = ['msjs/mensaje_1.txt', 'msjs/mensaje_2.txt', 'msjs/mensaje_3.txt']
+
+def decodificar(archivo):
+    ENCODING = 'utf-8'
+    
+    contenido = hydra.leer_archivo(archivo, codificacion=ENCODING)
+    contenido_descifrado = hydra.descifrar_texto(contenido)
+
+    print(f'\nContenido de "{archivo}":')
+    print(contenido_descifrado)
+
+for archivo in archivos:
+    decodificar(archivo)
